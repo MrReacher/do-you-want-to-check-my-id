@@ -14,7 +14,7 @@ class Main(commands.Bot):
         intents = discord.Intents.default()
         intents.members = True
         intents.typing = False
-        super().__init__(command_prefix='`', pm_help=None, intents=intents)
+        super().__init__(command_prefix='`', intents=intents)
 
         for extension in extensions:
             try:
