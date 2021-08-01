@@ -161,7 +161,7 @@ class AuditLogChecker(commands.Cog):
             return
 
         if not self._ready.is_set():
-            self._ready.wait()
+            await self._ready.wait()
 
         for tries in range(5):
             entries = await guild.audit_logs(action=action, limit=5).flatten()
